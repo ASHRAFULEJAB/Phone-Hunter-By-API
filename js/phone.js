@@ -8,6 +8,17 @@ const phonesContainer = async(searhText) =>{
 const phoneLoading = phones =>{
     const phoneConatiner =  document.getElementById('phones-container');
     phoneConatiner.textContent='';
+    phones = phones.slice(0,15);
+
+    const notFound = document.getElementById('not-found');
+    
+    if(phones.length === 0){
+       notFound.classList.remove('d-none')
+    }
+    else{
+        notFound.classList.add('d-none');
+    }
+
     phones.forEach(phone=>{
       const phoneDiv = document.createElement('div');
       phoneDiv.classList.add('col');
@@ -32,4 +43,4 @@ document.getElementById('btn-search').addEventListener('click',function(){
     inputField.value ='';
     phonesContainer(searhText);
 })
-phonesContainer()
+// phonesContainer()
