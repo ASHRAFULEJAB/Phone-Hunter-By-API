@@ -14,6 +14,7 @@
     </header>
     <main>
         <section>
+            <!-- Search button part -->
             <div class="row g-3 justify-content-center">
                 <div class="col-auto">
                   <input type="text" class="form-control" id="input-field" placeholder="Search Here??">
@@ -23,6 +24,7 @@
                 </div>
               </div>
         </section>
+        <!-- show all phones part -->
         <section  class="p-3">
             <div id="phones-container" class="row row-cols-1 row-cols-md-3 g-4">
                  
@@ -31,7 +33,42 @@
             <div id="not-found" class="mt-6 d-none">
                 <h3 class="text-danger"> No Phones Found..Please Search Another Name</h3>
             </div>
+
+            
+                <div id="show-all" class=" d-none text-center mt-5 ">
+                    <div id="btn-show-all" class="btn btn-primary">Show All</div>
+                </div>
+            
         </section>
+
+        <!-- spinner part -->
+        <section id="spinner" class="d-none">
+            <div style="height:400px;" class="d-flex justify-content-center align-items-center">
+                <div class="spinner-border text-danger" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              </div>
+        </section>
+
+        <!-- modal part -->
+        <!-- Button trigger modal -->
+  <!-- Modal -->
+  <div class="modal fade" id="phoneDetailsModal" tabindex="-1" aria-labelledby="phoneDetailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="phoneDetailsModalLabel"> </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div id="phone-modal-details" class="modal-body">
+         
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
